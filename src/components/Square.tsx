@@ -1,12 +1,15 @@
+import { Squares } from './Game';
+
 interface Props {
     index: number
-	value: string | null;
-	handleClick: (i: number) => void;
+	value: Squares
+    winningSquare: number | null
+    handleClick: (i: number) => void;
 }
 
-export const Square = ({ index, value, handleClick }: Props) => {
+export const Square = ({ index, value, winningSquare, handleClick }: Props) => {
 	return (
-		<button className='square' onClick={() => handleClick(index)}>
+		<button className={`square ${winningSquare && winningSquare === index && 'winner'}`} onClick={() => handleClick(index)}>
 			{value}
 		</button>
 	);

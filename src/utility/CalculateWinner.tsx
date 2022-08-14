@@ -1,6 +1,6 @@
 import { Squares } from '../components/Game';
 
-const CalculateWinner = (squares: Squares[] | Squares) => {
+export const calculateWinner = (squares: Squares[] | Squares) => {
 	const lines = [
 		[0, 1, 2],
 		[3, 4, 5],
@@ -25,5 +25,3 @@ const CalculateWinner = (squares: Squares[] | Squares) => {
 	}
 	return null;
 };
-
-export default CalculateWinner;
