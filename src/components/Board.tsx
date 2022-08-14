@@ -23,7 +23,7 @@ export const Board = ({ squares, winningSquare, handleClick }: Props) => {
 	};
 
 	const renderRows = (i: number, squares: JSX.Element[]) => (
-		<div key={i} className='board-row'>
+		<div key={i} className='grid grid-cols-3'>
 			{squares}
 		</div>
 	);
@@ -32,5 +32,5 @@ export const Board = ({ squares, winningSquare, handleClick }: Props) => {
 		<Square key={i} index={i} value={squares[i]} winningSquare={winningSquare} handleClick={handleClick} />
 	);
 
-	return <div>{BoardRows(3, 3)}</div>;
+	return <main className='grid grid-rows-3 h-48 w-48'>{BoardRows(3, 3)}</main>;
 };

@@ -1,7 +1,7 @@
 {
-  "name": "react-development-environment",
+  "name": "tic-tac-toe",
   "version": "1.0.0",
-  "description": "React development environment",
+  "description": "React Tic-Tac-Toe",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel open:src lint:watch",
